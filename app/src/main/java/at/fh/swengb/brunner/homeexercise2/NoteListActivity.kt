@@ -37,7 +37,6 @@ class NoteListActivity : AppCompatActivity() {
     }
 
 
-
     override fun onResume(){
         super.onResume()
         val dbItems = myDb.noteDao.findAllNotes()
