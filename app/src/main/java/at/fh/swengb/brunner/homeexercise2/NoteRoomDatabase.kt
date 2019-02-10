@@ -6,9 +6,10 @@ import android.arch.persistence.room.RoomDatabase
 import android.content.Context
 
 
-@Database(entities = [Note::class], version = 1)
+@Database(entities = [Note::class, User::class], version = 2)
 abstract class NoteRoomDatabase : RoomDatabase(){
     abstract val noteDao: NoteDao
+    abstract val userDao: UserDao
 
     companion object {
         fun getDatabase(context: Context): NoteRoomDatabase {
